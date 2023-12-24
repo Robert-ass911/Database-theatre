@@ -35,6 +35,7 @@ CREATE TABLE Customers (
     performance_id INTEGER DEFAULT 0,
     fio TEXT DEFAULT '',
     email TEXT DEFAULT '',
+    Comments TEXT DEFAULT '',
     FOREIGN KEY (performance_id) REFERENCES Performances(id)
 );
 
