@@ -23,7 +23,7 @@ class User(ModifyBaseModel):
 
 class Plays(BaseModel):
     name: str = ''
-    price: str = ''
+    author: str = ''
     description: str = ''
 
 class Applications(BaseModel):
