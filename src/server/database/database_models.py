@@ -35,6 +35,7 @@ class Customers(BaseModel):
     performance_id = ForeignKeyField(Performances, backref='applications', default=0)
     fio = CharField(default='')
     email = CharField(default='')
+    Comments = CharField(default='')
 
 class Seats(BaseModel):
     place_num = IntegerField(default=0)
