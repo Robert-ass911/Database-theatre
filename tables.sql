@@ -15,7 +15,7 @@ CREATE TABLE Plays (
 
 CREATE TABLE Applications (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    date VARCHAR(50) DEFAULT '',
+    date DateField(null=True),
     play_id INTEGER DEFAULT 0,
     count_tickets INTEGER DEFAULT 0,
     FOREIGN KEY (play_id) REFERENCES Plays(id)
@@ -24,7 +24,7 @@ CREATE TABLE Applications (
 CREATE TABLE Performances (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(50) DEFAULT '',
-    date VARCHAR(50) DEFAULT '',
+    date DateField(null=True) '',
     play_id INTEGER DEFAULT 0,
     price INTEGER DEFAULT 0,
     FOREIGN KEY (play_id) REFERENCES Plays(id)
