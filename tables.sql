@@ -9,7 +9,7 @@ CREATE TABLE User (
 CREATE TABLE Plays (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT DEFAULT '',
-    price TEXT DEFAULT '',
+    author TEXT DEFAULT '',
     description TEXT DEFAULT ''
 );
 
