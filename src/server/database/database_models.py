@@ -17,7 +17,7 @@ class User(BaseModel):
 
 class Plays(BaseModel):
     name = CharField(default='')
-    price = CharField(default='')
+    author = CharField(default='')
     description = CharField(default='')
 
 class Applications(BaseModel):
