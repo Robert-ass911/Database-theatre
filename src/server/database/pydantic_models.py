@@ -41,6 +41,7 @@ class Customers(BaseModel):
     performance_id: int = 0
     fio: str = ''
     email: str = ''
+    comments: str = ''
 
 class Seats(BaseModel):
     place_num: int = 0
