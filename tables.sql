@@ -1,21 +1,21 @@
 CREATE TABLE User (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    position TEXT DEFAULT '',
-    login TEXT DEFAULT '',
-    password TEXT DEFAULT '',
+    position VARCHAR(50) DEFAULT '',
+    login VARCHAR(50) DEFAULT '',
+    password VARCHAR(50) DEFAULT '',
     power_level INTEGER DEFAULT 0
 );
 
 CREATE TABLE Plays (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT DEFAULT '',
-    author TEXT DEFAULT '',
-    description TEXT DEFAULT ''
+    name VARCHAR(50) DEFAULT '',
+    author VARCHAR(50) DEFAULT '',
+    description VARCHAR(50) DEFAULT ''
 );
 
 CREATE TABLE Applications (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    date TEXT DEFAULT '',
+    date VARCHAR(50) DEFAULT '',
     play_id INTEGER DEFAULT 0,
     count_tickets INTEGER DEFAULT 0,
     FOREIGN KEY (play_id) REFERENCES Plays(id)
@@ -23,8 +23,8 @@ CREATE TABLE Applications (
 
 CREATE TABLE Performances (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT DEFAULT '',
-    date TEXT DEFAULT '',
+    name VARCHAR(50) DEFAULT '',
+    date VARCHAR(50) DEFAULT '',
     play_id INTEGER DEFAULT 0,
     price INTEGER DEFAULT 0,
     FOREIGN KEY (play_id) REFERENCES Plays(id)
@@ -33,9 +33,9 @@ CREATE TABLE Performances (
 CREATE TABLE Customers (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     performance_id INTEGER DEFAULT 0,
-    fio TEXT DEFAULT '',
-    email TEXT DEFAULT '',
-    Comments TEXT DEFAULT '',
+    fio VARCHAR(50) DEFAULT '',
+    email VARCHAR(50) DEFAULT '',
+    Comments VARCHAR(50) DEFAULT '',
     FOREIGN KEY (performance_id) REFERENCES Performances(id)
 );
 
